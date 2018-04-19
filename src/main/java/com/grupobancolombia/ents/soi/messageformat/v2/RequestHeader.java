@@ -1,10 +1,8 @@
 
 package com.grupobancolombia.ents.soi.messageformat.v2;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
+
 import com.grupobancolombia.ents.soi.coreextensions.v2.Classifications;
 import com.grupobancolombia.ents.soi.coreextensions.v2.Destination;
 import com.grupobancolombia.ents.soi.coreextensions.v2.UsernameToken;
@@ -37,6 +35,7 @@ import com.grupobancolombia.ents.soi.coreextensions.v2.UsernameToken;
     "destination",
     "classifications"
 })
+@XmlRootElement
 public class RequestHeader
     extends Header
 {
