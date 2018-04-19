@@ -9,8 +9,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Holder;
 import com.grupobancolombia.ents.soi.messageformat.v2.RequestHeader;
 import com.grupobancolombia.ents.soi.messageformat.v2.ResponseHeader;
-import com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v1.ConsultarDetalleExtendido;
-import com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v1.ConsultarDetalleExtendidoResponse;
+import com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v2.ConsultarInformacionExtendidaCuenta;
+import com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v2.ConsultarInformacionExtendidaCuentaResponse;
 
 
 /**
@@ -19,13 +19,13 @@ import com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v1.C
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "ConsultaCuentaDepositos", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V1.0")
+@WebService(name = "ConsultaCuentaDepositos", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
     com.grupobancolombia.ents.common.genericexception.v2.ObjectFactory.class,
     com.grupobancolombia.ents.soi.coreextensions.v2.ObjectFactory.class,
     com.grupobancolombia.ents.soi.messageformat.v2.ObjectFactory.class,
-    com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v1.ObjectFactory.class
+    com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v2.ObjectFactory.class
 })
 public interface ConsultaCuentaDepositos {
 
@@ -37,18 +37,19 @@ public interface ConsultaCuentaDepositos {
      * @param requestHeader
      * @param parameters
      * @throws SystemExceptionMsg
+     * @throws ConsultaCuentaDepositosBusinessExceptionMsg
      */
-    @WebMethod(action = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V1.0/consultarDetalleExtendido")
-    public void consultarDetalleExtendido(
-        @WebParam(name = "consultarDetalleExtendido", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V1.0", partName = "parameters")
-        ConsultarDetalleExtendido parameters,
+    @WebMethod(action = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0/consultarInformacionExtendidaCuenta")
+    public void consultarInformacionExtendidaCuenta(
+        @WebParam(name = "consultarInformacionExtendidaCuenta", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0", partName = "parameters")
+        ConsultarInformacionExtendidaCuenta parameters,
         @WebParam(name = "requestHeader", targetNamespace = "http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1", header = true, partName = "requestHeader")
         RequestHeader requestHeader,
-        @WebParam(name = "consultarDetalleExtendidoResponse", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V1.0", mode = WebParam.Mode.OUT, partName = "result")
-        Holder<ConsultarDetalleExtendidoResponse> result,
+        @WebParam(name = "consultarInformacionExtendidaCuentaResponse", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0", mode = WebParam.Mode.OUT, partName = "result")
+        Holder<ConsultarInformacionExtendidaCuentaResponse> result,
         @WebParam(name = "responseHeader", targetNamespace = "http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1", header = true, mode = WebParam.Mode.OUT, partName = "responseHeader")
         Holder<ResponseHeader> responseHeader)
-        throws SystemExceptionMsg
+        throws ConsultaCuentaDepositosBusinessExceptionMsg, SystemExceptionMsg
     ;
 
 }

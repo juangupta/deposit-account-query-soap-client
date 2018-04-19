@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "ConsultaCuentaDepositos", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/Enlace/V1.0", wsdlLocation = "file:/C:/xml/wsdl/ConsultaCuentaDepositos_V1.0.wsdl")
+@WebServiceClient(name = "ConsultaCuentaDepositos", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/Enlace/V1.0", wsdlLocation = "file:/C:/xml/wsdlrar/wsdl/ConsultaCuentaDepositos_V2.0.wsdl")
 public class ConsultaCuentaDepositos_Service
     extends Service
 {
@@ -30,7 +30,7 @@ public class ConsultaCuentaDepositos_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/C:/xml/wsdl/ConsultaCuentaDepositos_V1.0.wsdl");
+            url = new URL("file:/C:/xml/wsdlrar/wsdl/ConsultaCuentaDepositos_V2.0.wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

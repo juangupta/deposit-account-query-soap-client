@@ -2,7 +2,7 @@
 package com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.enlace.v1;
 
 import javax.xml.ws.WebFault;
-import com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v1.SystemException;
+import com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v2.SystemException;
 
 
 /**
@@ -11,7 +11,7 @@ import com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v1.S
  * Generated source version: 2.2
  * 
  */
-@WebFault(name = "systemException", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V1.0")
+@WebFault(name = "systemException", targetNamespace = "http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0")
 public class SystemExceptionMsg
     extends Exception
 {
@@ -46,7 +46,7 @@ public class SystemExceptionMsg
     /**
      * 
      * @return
-     *     returns fault bean: com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v1.SystemException
+     *     returns fault bean: com.grupobancolombia.intf.producto.depositos.consultacuentadepositos.v2.SystemException
      */
     public SystemException getFaultInfo() {
         return faultInfo;
