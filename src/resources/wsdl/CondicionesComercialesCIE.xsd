@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <xsd:schema
+	targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0">
+	
+	<xsd:include schemaLocation="InformacionTransaccion.xsd"></xsd:include>
+	
+	    <xsd:complexType name="CondicionesComercialesCIE">
+		<xsd:sequence>
+			<xsd:element minOccurs="1" name="informacionTransaccion"
+				type="bons0:InformacionTransaccion">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

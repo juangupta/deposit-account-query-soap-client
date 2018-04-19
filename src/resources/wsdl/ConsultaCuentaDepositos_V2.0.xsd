@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 13/12/2016 - Generado por: wigiraldo  -->
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0"
+	xmlns:tns="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://grupobancolombia.com/ents/common/GenericException/V2.0">
+
+	<!-- Inicio Importaciones -->
+	<xs:include schemaLocation="InformacionCuentaCIE.xsd"></xs:include>
+	<xs:include schemaLocation="InformacionCuentaCIEResp.xsd"></xs:include>
+	
+	<xs:import schemaLocation="common-core-GenericException-V2.xsd"
+		namespace="http://grupobancolombia.com/ents/common/GenericException/V2.0">
+	</xs:import>
+	<!-- Fin Importaciones -->
+	
+	<!--Inicio Operaciones)-->
+	<xs:element name="consultarInformacionExtendidaCuenta" type="tns:ConsultarInformacionExtendidaCuenta">
+	</xs:element>
+
+	<xs:element name="consultarInformacionExtendidaCuentaResponse" type="tns:ConsultarInformacionExtendidaCuentaResponse">
+	</xs:element>
+
+	<!--Fin Operaciones)-->
+
+	<!-- Inicio Excepciones -->
+	<xs:element name="systemException" type="tns:SystemException">
+	</xs:element>
+	
+	<xs:element name="consultaCuentaDepositosBusinessException" type="tns:ConsultaCuentaDepositosBusinessException">
+	</xs:element>
+	
+	<!-- Fin Excepciones -->
+	
+	<!-- Inicio tipos complejos -->
+	
+	<!--Inicio Tipos Complejos Operaciones-->
+	<xs:complexType name="ConsultarInformacionExtendidaCuenta">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="informacionCuenta"
+				type="tns:InformacionCuentaCIE">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ConsultarInformacionExtendidaCuentaResponse">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="informacionCuenta"
+				type="tns:InformacionCuentaCIEResp">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--Fin Tipos Complejos Operaciones-->
+
+
+	<!--Inicio Tipos Complejos Excepciones-->
+	<xs:complexType name="SystemException">
+		<xs:sequence>
+			<xs:element name="genericException" type="bons0:GenericException">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+		<xs:complexType name="ConsultaCuentaDepositosBusinessException">
+		<xs:sequence>
+			<xs:element name="genericException" type="bons0:GenericException">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--Fin Tipos Complejos Excepciones-->
+	
+	<!-- Inicio tipos complejos -->
+
+</xs:schema>

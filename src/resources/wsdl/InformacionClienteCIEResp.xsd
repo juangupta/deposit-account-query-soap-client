@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 04/10/2016 - Generado por: mosepulv  -->
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0"
+	xmlns:tns="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Inicio Importaciones -->
+	<xs:include schemaLocation="RelacionClienteCIEResp.xsd"></xs:include>
+	<xs:include schemaLocation="IdentificacionTitularCIEResp.xsd"></xs:include>
+	
+	<!--Inicio Tipos Complejos Operaciones-->
+	<xs:complexType name="InformacionClienteCIEResp">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="relacionCliente"
+				type="tns:RelacionClienteCIEResp">
+			</xs:element>
+			<xs:element minOccurs="1" name="identificacionTitular"
+				type="tns:IdentificacionTitularCIEResp">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

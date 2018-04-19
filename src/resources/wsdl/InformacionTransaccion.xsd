@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 08/08/2016 - Generado por: jujaramillo  -->
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0"
+	xmlns:tns="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	
+	<!--Inicio Tipos Complejos Operaciones-->
+	<xs:complexType name="InformacionTransaccion">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="tipoCuenta">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="3"></xs:maxLength>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="numeroCuenta">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="16"></xs:maxLength>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	
+	<!--Fin Tipos Complejos Operaciones-->
+
+	<!--Inicio Tipos Complejos Excepciones-->
+	
+	<!--Fin Tipos Complejos Excepciones-->
+	
+	<!-- Inicio tipos complejos -->
+
+</xs:schema>

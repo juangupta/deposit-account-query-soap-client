@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 05/10/2016 - Generado por: mosepulv  -->
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0"
+	xmlns:tns="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Inicio Importaciones -->
+	<xs:include schemaLocation="InformacionTransaccionResp.xsd"></xs:include>
+	
+	
+	<!--Inicio Tipos Complejos Operaciones-->
+	
+	<xs:complexType name="CondicionesComercialesCIEResp">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="codigoMoneda">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element> 	
+			<xs:element minOccurs="1" name="codigoOficina">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="8" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="informacionTransaccion"
+				type="tns:InformacionTransaccionResp">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

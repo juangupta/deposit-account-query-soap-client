@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 13/12/2016 - Generado por: wigiraldo  -->
+<wsdl:definitions name="ConsultaCuentaDepositos"
+	targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0" xmlns:tns="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mf="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1">
+	
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0">
+			<xsd:include schemaLocation="ConsultaCuentaDepositos_V2.0.xsd" />
+
+			<xsd:import schemaLocation="soi-core-MessageFormat-V2.1.xsd"
+				namespace="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" />
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="consultarInformacionExtendidaCuentaRequestMsg">
+		<wsdl:part element="tns:consultarInformacionExtendidaCuenta" name="parameters" />
+		<wsdl:part element="mf:requestHeader" name="requestHeader" />
+	</wsdl:message>
+
+	<wsdl:message name="consultarInformacionExtendidaCuentaResponseMsg">
+		<wsdl:part element="tns:consultarInformacionExtendidaCuentaResponse" name="result" />
+		<wsdl:part element="mf:responseHeader" name="responseHeader" />
+	</wsdl:message>
+	
+	<wsdl:message name="systemExceptionMsg">
+		<wsdl:part element="tns:systemException" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="consultaCuentaDepositosBusinessExceptionMsg">
+		<wsdl:part element="tns:consultaCuentaDepositosBusinessException" name="parameters" />
+	</wsdl:message>
+	
+
+
+
+	<wsdl:portType name="ConsultaCuentaDepositos">
+
+
+		<!--por cada operación)-->
+		<wsdl:operation name="consultarInformacionExtendidaCuenta">
+		
+			<wsdl:input name="consultarInformacionExtendidaCuentaRequest"
+				message="tns:consultarInformacionExtendidaCuentaRequestMsg" />
+		
+			<wsdl:output name="consultarInformacionExtendidaCuentaResponse"
+				message="tns:consultarInformacionExtendidaCuentaResponseMsg" />
+			
+			<wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+			<wsdl:fault name="consultaCuentaDepositosBusinessException" message="tns:consultaCuentaDepositosBusinessExceptionMsg" />
+				
+		</wsdl:operation>
+		
+		
+		<!--por cada operación)-->
+
+	</wsdl:portType>
+
+
+</wsdl:definitions>

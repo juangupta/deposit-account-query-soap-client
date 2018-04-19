@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 05/10/2016 - Generado por: mosepulv  -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0">
+
+	<!--Inicio Tipos Complejos Operaciones-->
+	<xs:complexType name="InformacionTransaccionResp">
+		<xs:sequence>
+			<xs:element minOccurs="1" name="tipoCuenta">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="3" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="numeroCuenta">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="16" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="cuentaPermiteDebitos">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />					
+						<xs:maxLength value="1" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element> 			
+			<xs:element minOccurs="1" name="cuentaPermiteCreditos">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="1" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="fechaApertura">
+				<xs:simpleType>
+					<xs:restriction base="xs:date">
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element> 
+			<xs:element minOccurs="1" name="numeroDiasInactividad" type="xs:integer" />
+			<xs:element minOccurs="1" name="indicadorCuentaCancelada">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="1" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element> 
+			<xs:element minOccurs="0" name="fechaCancelacionCuenta">
+				<xs:simpleType>
+					<xs:restriction base="xs:date">
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="1" name="marcasCuenta">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="50"></xs:maxLength>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>				
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

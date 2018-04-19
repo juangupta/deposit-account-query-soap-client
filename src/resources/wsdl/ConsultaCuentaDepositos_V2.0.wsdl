@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 13/12/2016 - Generado por: wigiraldo  -->
+<wsdl:definitions name="ConsultaCuentaDepositos"
+	targetNamespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/Enlace/V1.0" 
+	xmlns:tns="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/Enlace/V1.0"
+	xmlns:ns="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+
+	<wsdl:import location="ConsultaCuentaDepositos_Intf_V2.0.wsdl"
+		namespace="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0">
+	</wsdl:import>
+
+	<wsdl:binding name="ConsultaCuentaDepositosHttpBinding" type="ns:ConsultaCuentaDepositos">
+
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+
+
+		<wsdl:operation name="consultarInformacionExtendidaCuenta">
+
+			<soap:operation
+				soapAction="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/V2.0/consultarInformacionExtendidaCuenta" />
+
+			<wsdl:input name="consultarInformacionExtendidaCuentaRequest">
+			
+				<soap:body parts="parameters" use="literal" />
+			
+				<soap:header message="ns:consultarInformacionExtendidaCuentaRequestMsg" part="requestHeader" use="literal" />
+			
+			</wsdl:input>
+
+			<wsdl:output name="consultarInformacionExtendidaCuentaResponse">
+			
+				<soap:body parts="result" use="literal" />
+			
+				<soap:header message="ns:consultarInformacionExtendidaCuentaResponseMsg" part="responseHeader" use="literal" />
+			
+			</wsdl:output>
+
+			<wsdl:fault name="systemException">
+				<soap:fault name="systemException" use="literal" />
+			</wsdl:fault>
+			<wsdl:fault name="consultaCuentaDepositosBusinessException">
+				<soap:fault name="consultaCuentaDepositosBusinessException" use="literal" />
+			</wsdl:fault>
+
+
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+	<wsdl:service name="ConsultaCuentaDepositos">
+		<wsdl:port binding="tns:ConsultaCuentaDepositosHttpBinding" name="ConsultaCuentaDepositosHttpPort">
+			<soap:address
+				location="http://grupobancolombia.com/intf/Producto/Depositos/ConsultaCuentaDepositos/Enlace/V1.0" />
+		</wsdl:port>
+	</wsdl:service>
+
+</wsdl:definitions>
